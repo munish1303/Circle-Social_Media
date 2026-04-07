@@ -1,0 +1,45 @@
+.bs-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 500;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bs-box {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  width: 100%;
+  max-width: var(--max-width);
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+  overflow: hidden;
+}
+
+.bs-handle {
+  width: 36px;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+  margin: 12px auto 8px;
+}
+
+.bs-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 15px;
+  color: var(--color-text);
+  border-top: 1px solid var(--color-border);
+  text-align: left;
+  transition: background var(--transition);
+}
+
+.bs-option:hover { background: var(--color-surface); }
+.bs-option--danger { color: var(--color-error); font-weight: 600; }
+.bs-option--cancel { color: var(--color-text-secondary); font-weight: 600; margin-top: 8px; border-top: 8px solid var(--color-surface); }
+
+.bs-option__icon { display: flex; align-items: center; color: var(--color-text-secondary); }
